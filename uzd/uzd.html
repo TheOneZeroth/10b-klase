@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Ievadiet šodienas dienu (no 1-7)</p>
+    <input type="number" id="dienasSkaitlis" min="1" max="7" placeholder="3">
+    <button onclick="paraditDienu"></button>
+    <p id="rezultāts"></p>
+    <!--ievades lauks-->
+    
+    <script>
+    function paraditDienu() {
+        let dienasSkaitlis = parseInt(document.getElementById("dienasSkaitlis")).value;
+
+        let dienasNosaukums = ["Pirmdiena","Otrdiena","Trešdiena","Ceturdiena","Piektdiena","Sestdiena","Svētdiena"];
+
+        if(dienasSkaitlis>=1 && dienasSkaitlis<=7) {
+            document.getElementById("rezultāts").innerText="Šodien ir = "+dienasNosaukums[dienasSkaitlis-1]+"!";
+        }
+        else {
+            document.getElementById("rezultāts").innerText="Lūdzu ievadiet skaitli no 1 - 7"
+        }
+        
+    }
+    </script>
+</body>
+</html>
