@@ -29,3 +29,4 @@ if (age >= 18 && citizenship == true){
 } else if(age >= 18 && citizenship != true){
     console.log("Ir 18, bet nav pilsonis ")
 }
+
